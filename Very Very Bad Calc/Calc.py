@@ -118,12 +118,12 @@ icon = PhotoImage(file='Calc.png')
 
 Output = Label(window3, textvariable=Varoa, font=('Arial',40),bg='BLACK', fg='WHITE')
 
-Int1.grid(row= 0, column= 0)
-Int2.grid(row = 1, column= 0)
-Plus_Button.grid(row=0,column=1)
-Minus_Button.grid(row=1,column=1)
-Addition_Button.grid(row=2,column=1)
-Divide_Button.grid(row=3,column=1)
+Int1.grid(row= 0, column= 0,sticky='nsew')
+Int2.grid(row = 1, column= 0,sticky='nsew')
+Plus_Button.grid(row=0,column=1,sticky='nsew')
+Minus_Button.grid(row=1,column=1,sticky='nsew')
+Addition_Button.grid(row=2,column=1,sticky='nsew')
+Divide_Button.grid(row=3,column=1,sticky='nsew')
 Output.grid(row=5, column=0, columnspan=2,sticky='nsew')
 submit_button.grid(row=3, column= 0,sticky='nsew')
 
