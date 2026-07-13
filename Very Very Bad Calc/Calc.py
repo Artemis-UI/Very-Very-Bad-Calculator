@@ -51,34 +51,27 @@ def Calculate():
 
     
 
-
-    
-    
-
-    
-
-
-window = Tk()
-window2 = Tk()
 window3 = Tk()
 
 
 Varoa = StringVar()
-Varoa.set("main")
+Varoa.set("Output")
 
 
-Int1 = Entry(window2,
-             font=('Arial',50),
+Int1 = Entry(window3,
+             font=('Arial',40),
              bg='BLACK',
-             fg='white')
+             fg='white',
+             width= 5)
 
-Int2 = Entry(window2,
-             font=('Arial',50),
+Int2 = Entry(window3,
+             font=('Arial',40),
              bg='BLACK',
-             fg='white')
+             fg='white',
+             width= 5)
 
 
-submit_button = Button(window,
+submit_button = Button(window3,
                        text="Submit",
                        command=Calculate,
                        bg='BLACK',
@@ -89,55 +82,49 @@ Plus_Button = Button(window3,
                      command=Type,
                      bg='BLACK',
                      fg='WHITE',
-                     padx=20)
+                     padx=38.499999,
+                     pady=20)
 
 Addition_Button = Button(window3,
                      text="*",
                      command=Type3,
                      bg='BLACK',
                      fg='WHITE',
-                     padx=20)
+                     padx=40,
+                     pady=20)
 
 Divide_Button = Button(window3,
                      text="/",
                      command=Type4,
                      bg='BLACK',
                      fg='WHITE',
-                     padx=20)
+                     padx=40,
+                     pady=20)
 
 Minus_Button = Button(window3,
                       text="-",
                       command=Type2,
                       bg='BLACK',
                       fg='WHITE',
-                      padx=20)
+                      padx=40,
+                      pady=20)
 
-window.geometry("200x100")
-window.title("Calculator")
 
-window2.geometry("200x150")
-window2.title("Calculator")
 
-window3.geometry("300x300")
 window3.title("Calculator")
-
-
+window3.configure(bg='GRAY')
 icon = PhotoImage(file='Calc.png')
-window.iconphoto(True,icon)
-window.config(background="Gray")
-Int1.pack()
-Int2.pack()
-submit_button.pack()
-
-Output = Label(window, textvariable=Varoa, font=('Arial',14))
-Output.pack(pady=20)
 
 
-Plus_Button.grid(row=0,column=0)
-Minus_Button.grid(row=0,column=1)
-Addition_Button.grid(row=0,column=2)
-Divide_Button.grid(row=0,column=3)
+Output = Label(window3, textvariable=Varoa, font=('Arial',40),bg='BLACK', fg='WHITE')
 
-window.mainloop()
-window2.mainloop()
+Int1.grid(row= 0, column= 0)
+Int2.grid(row = 1, column= 0)
+Plus_Button.grid(row=0,column=1)
+Minus_Button.grid(row=1,column=1)
+Addition_Button.grid(row=2,column=1)
+Divide_Button.grid(row=3,column=1)
+Output.grid(row=5, column=0, columnspan=2,sticky='nsew')
+submit_button.grid(row=3, column= 0,sticky='nsew')
+
 window3.mainloop()
