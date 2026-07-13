@@ -1,4 +1,5 @@
 from tkinter import *
+import os
 
 Plus = False
 Minus = False
@@ -25,7 +26,8 @@ def Type4():
     Divide = True
     Minus = Addition = Plus = False
 
-
+def Scram():
+    os._exit(0)
 
 def Calculate():
     Num1 = 0
@@ -71,6 +73,7 @@ Int2 = Entry(window3,
              width= 5)
 
 
+
 submit_button = Button(window3,
                        text="Submit",
                        command=Calculate,
@@ -114,6 +117,9 @@ Minus_Button = Button(window3,
 window3.title("Calculator")
 window3.configure(bg='GRAY')
 icon = PhotoImage(file='Calc.png')
+window3.iconphoto(True, icon)
+window3.protocol("WM_DELETE_WINDOW", Scram)
+
 
 
 Output = Label(window3, textvariable=Varoa, font=('Arial',40),bg='BLACK', fg='WHITE')
