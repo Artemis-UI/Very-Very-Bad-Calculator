@@ -26,3 +26,7 @@ How to Run it:
 
 How to Uninstall it:    
 -Delete the Folder with the Exe-File in it
+
+
+Use of Ai:
+-As a tool to answer questions i had about errors i encounterd
