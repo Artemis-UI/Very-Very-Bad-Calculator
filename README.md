@@ -3,8 +3,10 @@ A Calculation Programm, its my first Programm that will have a GUI so it could e
 
 
 
+
 What it can do:
     -Perform Calculations using the 4 Basic Operators (+)(-)(*)(/)
+
 
 
 
@@ -13,10 +15,12 @@ What it cant do:
 
 
 
+
 How to Run it:
-    1. Download the Zip-File from the lastest Release
-    2. Unpack the Zip-File
-    3. Launch the Exe-File in the Folder
+  1. Download the Zip-File from the lastest Release
+  2. Unpack the Zip-File
+  3. Launch the Exe-File in the Folder
+
 
 
 
