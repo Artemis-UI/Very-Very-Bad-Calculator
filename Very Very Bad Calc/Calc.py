@@ -6,11 +6,20 @@ Minus = False
 Divide = False
 Addition = False
 
+def validate(P):
+    if P == "":
+        return True
+    if P.isdigit():
+        return True
+    return False
+
+
 
 def Type():
     global Plus, Minus, Divide, Addition
     Plus = True
     Minus = Divide = Addition = False
+
 def Type2():
     global Plus, Minus, Divide, Addition
     Minus = True
@@ -55,18 +64,19 @@ def Calculate():
 
 window3 = Tk()
 
+vcmd = window3.register(validate)
 
 Varoa = StringVar()
 Varoa.set("Output")
 
 
-Int1 = Entry(window3,
+Int1 = Entry(window3,validate= "key", validatecommand=(vcmd, "%P"),
              font=('Arial',40),
              bg='BLACK',
              fg='white',
              width= 5)
 
-Int2 = Entry(window3,
+Int2 = Entry(window3, validate= "key", validatecommand=(vcmd, "%P"),
              font=('Arial',40),
              bg='BLACK',
              fg='white',
